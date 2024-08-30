@@ -15,7 +15,7 @@ type ChatContentProps = {
 function ChatContent({ icon, count, children }: PropsWithChildren<ChatContentProps>) {
   return (
     <>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-4">
         <div className="relative flex h-6 w-6 items-center justify-center">
           <Image width={11} height={20} src="/svg/arrow-left.svg" alt="뒤로가기 아이콘" />
         </div>
