@@ -16,6 +16,6 @@ export default meta
 export const Default: StoryObj<typeof IconBox> = {
   args: {
     type: 'default',
-    icon: 2,
+    icon: 1,
   },
 }
