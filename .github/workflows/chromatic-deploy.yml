@@ -36,6 +36,7 @@ jobs:
 
       - name: Build and Deploy with Chromatic
         uses: chromaui/action@v1
+        id: chromatic-deploy
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -43,4 +44,4 @@ jobs:
       - name: PR Auto Comment
         uses: thollander/actions-comment-pull-request@v2
         with:
-          message: 'Storybook 미리보기: ${{ steps.chromatic.outputs.storybookUrl }}'
+          message: 'Storybook 미리보기: ${{ steps.chromatic-deploy.outputs.storybookUrl }}'
